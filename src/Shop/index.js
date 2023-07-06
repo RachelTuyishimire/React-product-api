@@ -1,53 +1,45 @@
-import React, {useState, useEffect} from "react";
-import {Link} from 'react-router-dom'
-import './style.css'
+import { Link} from 'react-router-dom'
+import {useEffect, useState} from 'react'
 
+const Product =()=> {
+  const [products, setProducts] = useState([])
 
-const Products = () =>{
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(false);
-    useEffect(() =>{
-        (async()=>{
-    await getProducts();
-}) ()
-    }, [])
+  const getProducts = async() => {
+    const response = await fetch('https://dummyjson.com/products')
+    const data = await response.json()
+  
+    setProducts(data.products)
+  
+  }
 
-    const getProducts = async () =>{
-        try{
-            setLoading(true);
-            const response = await fetch ('https://dummyjson.com/products')
-            const result = await response.json();
-            setProducts(result.products);
-            setLoading(false);
-        }
-        catch(error){
-            console.log(error.message);
-        }
-    };
-    if(loading){
-        return <h2>Loading...</h2>
-    }
-    return(
-        <div>
-            <div className="product">
-            <h1 className="title">All Products</h1>
-            {products.map(item=>(
+  useEffect(()=> {
+    getProducts()
+  }, [])
 
-                <div key={item.id}>
-                    <img src={item.images[2]}/>
-                    <h2>{item.title}</h2>
-                    <p>{item.price}</p>
-                    <p>{item.discountPercentage}%</p>
-                </div>
-                    
- 
-                   
-                    
+   if (!Array.isArray(products)) {
+    return <p>No products available.</p>;
+  }
 
-           )) }
+  
+  return(
+    <div>
+    <h1>Product page 🛍️👝</h1>
+      {products.map(product => (
+        <div key={product.id}>
+          <Link to={`/product/${product.id}`}>
+            <h2>{product.title}</h2>
+            <p>{product.price}</p>
+            <p>{product.discountPercentage}%</p>
+            
+          </Link>
+        </div>)
+      )}
+      
+      <Link to="/">
+        <button>go back</button>  
+      </Link>
+    </div>
+  )
+}
 
-         </div>   
-        </div>
-    );
-};
-export default Products
+export default Product

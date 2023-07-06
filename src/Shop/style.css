@@ -1,8 +1,15 @@
 .title{
     text-align: center;
+    margin-top: -5%;
+
 }
 .product{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background: #e6fcf5;
+    
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    /* margin:50%; */
+   
 }
