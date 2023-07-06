@@ -1,0 +1,8 @@
+.title{
+    text-align: center;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
