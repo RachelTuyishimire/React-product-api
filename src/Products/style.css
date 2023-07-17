@@ -16,32 +16,34 @@
     text-align: center;
 }
 .product .content{
-    border: solid 1px rgb(221, 177, 96);
+    border: solid 5px #82c91e;
     border-radius: 20px;
     margin: 5%;
 }
-/* .product .content:hover{
-    background-color: rgb(0, 0, 0);
+.product .content:hover{
+    background-color: #a9e34b;
     color: white;
     cursor: pointer;
-    transition: 1.2s;
-} */
+    transition: 0.5s;
+}
 
 .product button{
     padding: 15px;
-    background-color: wheat;
+    background-color: #66a80f;
+    color:white;
     border: none;
     border-radius: 15px;
+    filter: drop-shadow(4px 4px 8px #66a80f);
 }
 .product button:hover{
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: #82c91e;
+    color: black;
     cursor: pointer;
     transition: 1.2s;
 }
 .product .btn{
     padding: 15px;
-    background-color: wheat;
+    background-color: #66a80f;
     border: none;
     border-radius: 15px;
 }

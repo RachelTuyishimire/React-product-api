@@ -42,7 +42,7 @@ const AddProduct =()=> {
   
   return (
     <div className='add'>
-      <h1>Add New Product</h1>
+      <h1 className='title'>Add New Product</h1>
       <input name='id' value={newProduct.id} type='text' placeholder="Enter product id" onChange={handleChange} />
       <input name='title' value={newProduct.title} type='text' placeholder="Enter product title" onChange={handleChange} />
       <input name='description' value={newProduct.description} type='text' placeholder="Enter product description" onChange={handleChange} />
@@ -53,12 +53,12 @@ const AddProduct =()=> {
       <input name='brand' value={newProduct.brand}  type='text' placeholder="Enter product brand" onChange={handleChange} />
       <input name='category'value={newProduct.category} type='text' placeholder="Enter product category"  onChange={handleChange} />
 
-       <button onClick={handleSubmit}>
+       <button className='buton' onClick={handleSubmit}>
          ADD PRODUCT
         </button>
       
-      <Link to='/product'>
-        <button>
+      <Link to='/products'>
+        <button className='buton'>
           PRODUCT Page
         </button>
       </Link>

@@ -1,6 +1,7 @@
 .form{
-    margin-top: 10%;
+    margin-top: 3%;
     margin-left: 35%;
+    
 }
 
 .form > input{
@@ -8,19 +9,26 @@
     border: solid 3px grey;
     border-radius: 10px;
 }
+.title{
+    color:#66a80f;
+    margin-left: 29.9%;
+    margin-top: 5%;
+}
 
 .form > button{
     padding: 15px;
     border-radius: 5px;
-    margin-left: 15%;
+    margin-left: 13%;
     border: none;
-    background-color: aqua;
+    background-color: #66a80f;
+    color:white;
+    filter: drop-shadow(4px 4px 8px #66a80f);
 }
 
 .form> button:hover{
-    background-color: white;
+    background-color: #82c91e;
     cursor: pointer;
-    color: white;
+    color: black;
 }
 
 .form h1{

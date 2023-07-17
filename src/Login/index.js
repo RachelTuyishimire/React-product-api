@@ -44,6 +44,7 @@ const Login = () => {
                 <br/>
                 <br/>
                 <input placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)}/>
+                <br/>
                 <button type="submit" onClick={() => {
                     navigate("products");
                 }}>LOGIN</button>

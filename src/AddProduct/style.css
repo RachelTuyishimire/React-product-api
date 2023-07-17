@@ -2,22 +2,30 @@ input{
     padding: 20px 90px;
     border: solid 3px grey;
     border-radius: 10px;
-    margin-left: 3%;
+    margin-left: 38%;
     margin-bottom: 3%;
+    display: flex;
+    margin-top: -2.5%;
+    
 }
 .title{
-    /* margin-right: 20%; */
-    color: blue;
+    color: #66a80f;
+    margin-left: -5%;
 }
-button{
-    padding: 15px;
-    background-color: white;
+.buton{
+    padding: 25px;
+    background-color: #66a80f;
     border: none;
     border-radius: 15px;
-    margin-left: 3%;
+    margin-left: 28%;
+    color: white;
+}
+button:hover{
+    background: #98ee28;
+    color: black;
 }
 .add{
-    margin-top: 5%;
+    margin-top: -4%;
 }
 
 .add h1{

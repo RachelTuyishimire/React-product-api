@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './style.css'
 
 const Product =()=> {
-  const [products, setProducts] = useState([]);
+  const [product, setProducts] = useState([]);
   
   useEffect(()=>{
     (async () =>{
@@ -14,9 +14,13 @@ const Product =()=> {
 
   const getProducts = async() => {
     try{
-      const response = await fetch('https://dummyjson.com/products')
-      const result = await response.json();
+      const response = await fetch ('https://dummyjson.com/products')
+      const result =await response.json();
       setProducts(result.products);
+
+      // const response = await fetch('https://dummyjson.com/products')
+      // const result = await response.json();
+      // setProducts(result.product);
      
 
     }
@@ -24,31 +28,29 @@ const Product =()=> {
       console.log(error.message)
     }  
   };
-  console.log({products});
+  console.log({product});
   let navigate = useNavigate();
   
   
   return(
+  
     <div className='product'>
-    <h1>All products</h1>
-            {products.map(item=>(
-
-                <div className='items' key={item.id}>
-                  <img className='image' alt='' src = {item.imges[3]}/>
-                    <h2>{item.title}</h2>
-                    <p>Ksh{item.price}</p>
-                    <p>{item.discountPercentage}%</p>
-                   <button onClick = {() => {navigate (`/products/${item.id}`);}}>More</button>
-                   <button className='btn' onClick= {()=>{
-                    navigate("?addproduct");
-                   }}>Add Product</button>
- 
-                    </div>
+      {product.map(item=>(
+        <div className='content' key={item.id}>
+          <img className='image' alt='' src={item.images[3]}/>
+          <h3>{item.title}</h3>
+          <h4>${item.price}</h4>
+          <h4>{item.discountPercentage}</h4>
+          <button  onClick={()=>{navigate(`/products/${item.id}`);}}> View More</button>
+          <button className='btn' onClick={()=>{navigate('/addproduct');}}>Add Product</button>
+          </div>
       ))}
-      
      
-    </div>
-  )
-}
+   
+      
+  
+    </div>)
+  
+};
 
 export default Product

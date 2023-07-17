@@ -10,13 +10,20 @@ const ProductDetails =()=> {
 
   const getProducts = useCallback(async() => {
     try{
-    const response = await fetch(`https://dummyjson.com/products/${id}`);
-    const data = await response.json();
-    setProduct(data);
-  } catch (error){
-    console.log(error.message);
-  }
- }, [id]);
+      const response = await fetch(`https://dummyjson.com/products/${id}`);
+      const data = await response.json();
+      setProduct(data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }, [id]);
+//     const response = await fetch(`https://dummyjson.com/products/${id}`);
+//     const data = await response.json();
+//     setProduct(data);
+//   } catch (error){
+//     console.log(error.message);
+//   }
+//  }, [id]);
 
   useEffect(()=> {
     getProducts()
@@ -24,16 +31,16 @@ const ProductDetails =()=> {
   
   return(
     <div>
-    <h1>
+    <h1 className='title'>
       Product name:  {product.title} </h1>
       <div>
         <p>{product.description}</p>
         
-        <span>{product.price}</span>
+        <p>{product.price}</p>
       </div>
       
       <Link to="/">
-        <button>
+        <button className='btn'>
           Go Back
         </button>  
       </Link>
