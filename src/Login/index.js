@@ -37,7 +37,7 @@ const Login = () => {
 
     return(
         <div>
-            <h1 className="title">WELCOME BACK, WE MISSED ON BOARD</h1>
+            <h1 className="tittle">WELCOME BACK, WE MISSED ON BOARD</h1>
             <form className="form" onSubmit={handleSubmit}>
                 
                 <input placeholder="Username" type = 'text' onChange={(e) => setUsername(e.target.value)}/>

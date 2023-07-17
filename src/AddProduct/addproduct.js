@@ -42,7 +42,7 @@ const AddProduct =()=> {
   
   return (
     <div className='add'>
-      <h1 className='title'>Add New Product</h1>
+      <h1 className='head'>Add New Product</h1>
       <input name='id' value={newProduct.id} type='text' placeholder="Enter product id" onChange={handleChange} />
       <input name='title' value={newProduct.title} type='text' placeholder="Enter product title" onChange={handleChange} />
       <input name='description' value={newProduct.description} type='text' placeholder="Enter product description" onChange={handleChange} />

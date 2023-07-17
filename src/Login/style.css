@@ -1,6 +1,6 @@
 .form{
     margin-top: 3%;
-    margin-left: 35%;
+    /* margin-left: 35%; */
     
 }
 
@@ -9,16 +9,16 @@
     border: solid 3px grey;
     border-radius: 10px;
 }
-.title{
+.tittle{
     color:#66a80f;
     margin-left: 29.9%;
     margin-top: 5%;
 }
 
 .form > button{
-    padding: 15px;
+    padding: 20px;
     border-radius: 5px;
-    margin-left: 13%;
+    margin-left: 45%;
     border: none;
     background-color: #66a80f;
     color:white;

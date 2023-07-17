@@ -2,13 +2,18 @@ p, span{
     text-align: center;
     font-size: 25px;
 }
+.title{
+    margin-left: 29%;
+    font-size: 50px;
+    color: #66a80f;
+}
 .btn{
     padding: 15px;
     background-color: #66a80f;
     border: none;
     color:white;
     border-radius: 15px;
-    margin-left: 45%;
+    margin-left: 48%;
     filter: drop-shadow(4px 4px 8px #82c91e);
 }
 .btn:hover{
