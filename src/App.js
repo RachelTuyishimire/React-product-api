@@ -1,44 +1,33 @@
-// import logo from './logo.svg';
-// import './App.css';
-// import {Routes, Route} from 'react-router-dom'
-// import Products from './Shop';
-// import ProductDetail from './Shop/productsdetails';
-// import AddProduct from './Shop/addproduct';
+import './App.css';
+import {BrowserRouter as Router, Routes,Route} from 'react-router-dom'
+import Login from './Login'
+import Product from './Products';
+import AddProduct from './AddProduct/addproduct';
+import ProductDetails from './ProductDetails/productsdetails';
 
-// function App() {
-//   return (
+function App() {
+  return (
   
-//        <div>
-//         <Products/>
+       <div>
+       <Router>
+       <Routes>
+        <Route path="/" element={<Login/>} />
+        <Route path='/products' element={<Product />} />
+        <Route path='/products/:id' element={<ProductDetails />} />
+        <Route path='/addProduct' element ={<AddProduct/>}/>
+      </Routes>
+       </Router>
     
         
         
       
-//     </div>
+    </div>
 
    
    
-//   );
-// }
-
-// export default App;
-import './App.css'
-import {Routes, Route} from 'react-router-dom'
-import Home from './components/Home'
-import Product from './components/Product'
-import ProductDetail from './components/ProductDetail'
-import AddProduct from './components/AddProduct'
-
-export default function App() {
-  return (
-    <main>
-      <Routes>
-        {/* <Route path="/" exact element={<Home />} /> */}
-        <Route path='/product' element={<Product />} />
-        <Route path='/product/:id' element={<ProductDetail />} />
-        <Route path='/addProduct' element ={<AddProduct/>}/>
-      </Routes>
-    </main>
-  )
+  );
 }
+export default App;
+
+
 

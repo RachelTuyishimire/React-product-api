@@ -1,5 +1,7 @@
 import {Link} from 'react-router-dom'
 import {useState} from 'react'
+import './style.css'
+
 
 const AddProduct =()=> {
 
@@ -39,11 +41,11 @@ const AddProduct =()=> {
   }
   
   return (
-    <>
+    <div className='add'>
+      <h1>Add New Product</h1>
       <input name='id' value={newProduct.id} type='text' placeholder="Enter product id" onChange={handleChange} />
       <input name='title' value={newProduct.title} type='text' placeholder="Enter product title" onChange={handleChange} />
       <input name='description' value={newProduct.description} type='text' placeholder="Enter product description" onChange={handleChange} />
-  
       <input name='price' value={newProduct.price} type='text' placeholder="Enter product price" onChange={handleChange} />
       <input name='discountPercentage' value={newProduct.discountPercentage} type='text' placeholder="Enter product discountPercentage" onChange={handleChange} />
       <input name='rating' value={newProduct.rating}  type='text' placeholder="Enter product rating" onChange={handleChange} />
@@ -61,7 +63,7 @@ const AddProduct =()=> {
         </button>
       </Link>
 
-    </>
+    </div>
     )
 }
   
